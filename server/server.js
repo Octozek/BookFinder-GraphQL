@@ -14,6 +14,7 @@ async function startServer() {
     typeDefs,
     resolvers,
     context: authMiddleware,
+    cache: 'bounded',
   });
 
   await server.start();
