@@ -9,13 +9,13 @@ export default defineConfig({
     open: true,
     proxy: {
       '/api': {
-        target: 'http://localhost:3001',
+        target: process.env.NODE_ENV === 'production' ? 'https://bookfinder-graphql.onrender.com/' : 'http://localhost:3001',
         secure: false,
         changeOrigin: true,
       },
     },
   },
   build: {
-    outDir: 'dist', // Ensure the output directory matches what your server expects
+    outDir: 'dist',
   },
 });
