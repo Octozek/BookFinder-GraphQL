@@ -2,14 +2,16 @@
     "name": "bookfinder-graphql",
     "version": "1.0.0",
     "scripts": {
-      "install-client": "cd client && npm install",
-      "install-server": "cd server && npm install",
-      "build-client": "cd client && npm run build",
-      "build": "npm run install-client && npm run install-server && npm run build-client",
-      "start": "cd server && npm start"
+        "install-client": "cd client && npm install",
+        "install-server": "cd server && npm install",
+        "build-client": "cd client && npm run build",
+        "build": "npm run install-client && npm run install-server && npm run build-client",
+        "start": "cd server && npm start"
     },
     "engines": {
-      "node": ">=14.0.0"
+        "node": ">=14.0.0"
+    },
+    "dependencies": {
+        "dotenv": "^16.4.5"
     }
-  }
-  
+}
