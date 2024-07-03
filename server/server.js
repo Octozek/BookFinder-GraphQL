@@ -31,10 +31,7 @@ async function startServer() {
     });
   }
 
-  mongoose.connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
+  mongoose.connect(process.env.MONGODB_URI);
 
   app.listen(PORT, () => {
     console.log(`🌍 Now listening on localhost:${PORT}`);
