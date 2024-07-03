@@ -31,7 +31,7 @@ async function startServer() {
     });
   }
 
-  mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/bookfinder', {
+  mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
