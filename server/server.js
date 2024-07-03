@@ -31,15 +31,17 @@ async function startServer() {
     });
   }
 
-  mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/bookfinder', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
-
-  app.listen(PORT, () => {
-    console.log(`🌍 Now listening on localhost:${PORT}`);
-    console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
-  });
+  mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/bookfinder')
+    .then(() => {
+      console.log('Successfully connected to MongoDB');
+      app.listen(PORT, () => {
+        console.log(`🌍 Now listening on localhost:${PORT}`);
+        console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
+      });
+    })
+    .catch(err => {
+      console.error('Failed to connect to MongoDB', err);
+    });
 }
 
 startServer();
