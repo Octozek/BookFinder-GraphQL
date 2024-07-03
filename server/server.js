@@ -31,7 +31,10 @@ async function startServer() {
     });
   }
 
-  mongoose.connect(process.env.MONGODB_URI);
+  mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/bookfinder', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
 
   app.listen(PORT, () => {
     console.log(`🌍 Now listening on localhost:${PORT}`);
