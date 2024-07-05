@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import App from './App.jsx';
 
-// Create an HTTP link to your GraphQL server
+// Use environment variable for GraphQL URI
 const httpLink = createHttpLink({
   uri: import.meta.env.VITE_GRAPHQL_URI,
 });

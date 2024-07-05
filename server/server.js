@@ -32,8 +32,9 @@ async function startServer() {
   }
 
   mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/bookfinder', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+    // The options below are deprecated and can be removed
+    // useNewUrlParser: true,
+    // useUnifiedTopology: true,
   });
 
   app.listen(PORT, () => {
