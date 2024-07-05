@@ -2,15 +2,12 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import App from './App.jsx';
 
-// Use environment variable for GraphQL URI
 const httpLink = createHttpLink({
   uri: import.meta.env.VITE_GRAPHQL_URI,
 });
 
-// Create an Apollo Client instance
 const client = new ApolloClient({
   link: httpLink,
   cache: new InMemoryCache(),
