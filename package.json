@@ -2,16 +2,27 @@
     "name": "bookfinder-graphql",
     "version": "1.0.0",
     "scripts": {
-        "install-client": "cd client && npm install",
-        "install-server": "cd server && npm install",
-        "build-client": "cd client && npm run build",
-        "build": "npm run install-client && npm run install-server && npm run build-client",
-        "start": "cd server && npm start"
+      "install-client": "cd client && npm install",
+      "install-server": "cd server && npm install",
+      "build-client": "cd client && npm run build",
+      "build": "npm run install-client && npm run install-server && npm run build-client",
+      "start": "cd server && npm start"
     },
     "engines": {
-        "node": ">=14.0.0"
+      "node": ">=14.0.0"
     },
     "dependencies": {
-        "dotenv": "^16.4.5"
+      "dotenv": "^16.4.5",
+      "apollo-server-express": "^3.13.0",
+      "bcryptjs": "^5.1.0",
+      "express": "^4.17.1",
+      "graphql": "^15.5.0",
+      "jsonwebtoken": "^8.5.1",
+      "mongoose": "^5.10.9"
+    },
+    "devDependencies": {
+      "@vitejs/plugin-react": "^1.0.0",
+      "vite": "^2.0.0"
     }
-}
+  }
+  
