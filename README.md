@@ -2,7 +2,7 @@
 
 ## Overview
 BookFinder-GraphQL is a MERN stack application that allows users to search for books using the Google Books API, save books to their account, and view their saved books. The application has been refactored to use Graph: The complete guide for getting started.
-Graph: The complete guide for getting started.
+Graph:
 
 ## Table of Contents
 - [Overview](#overview)
